@@ -1,8 +1,9 @@
+import streamlit as st
+st.cache.clear()
 import plotly
 import plotly.express as px
 import pandas as pd
 import numpy as np
-import streamlit as st
 import data as dataimport
 # Set page title and theme
 
