@@ -3,6 +3,7 @@ import plotly.express as px
 import pandas as pd
 import numpy as np
 import data as dataimport
+
 # Set page title and theme
 
 st.set_page_config(page_title="Medication Consumption App",
@@ -31,8 +32,8 @@ st.sidebar.header("#dataviz2023efrei")
 
 @st.cache_data
 def load_data():
-    url = "https://open-data-assurance-maladie.ameli.fr/medicaments/download.php?Dir_Rep=Open_MEDIC_Base_Complete&Annee=2022"
-    return pd.read_csv(url, encoding='ISO-8859-1')
+
+    return pd.read_parquet("treated_medic.parquet")
 
 medic = load_data()
 france_map = 'https://france-geojson.gregoiredavid.fr/repo/regions.geojson'
