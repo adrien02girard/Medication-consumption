@@ -32,7 +32,6 @@ st.sidebar.header("#dataviz2023efrei")
 
 @st.cache_data
 def load_data():
-
     return pd.read_parquet("treated_medic.parquet")
 
 medic = load_data()
