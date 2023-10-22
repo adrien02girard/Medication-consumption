@@ -32,7 +32,8 @@ st.sidebar.header("#dataviz2023efrei")
 
 @st.cache_data
 def load_data():
-    return pd.read_csv("treated_medic.csv", encoding='ISO-8859-1')
+    url = "https://assurance-maladie.ameli.fr/content/descriptif-des-variables-de-la-serie-open-medic"
+    return pd.read_csv(url, encoding='ISO-8859-1')
 
 medic = load_data()
 france_map = 'https://france-geojson.gregoiredavid.fr/repo/regions.geojson'
