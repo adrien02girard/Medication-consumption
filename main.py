@@ -32,7 +32,7 @@ st.sidebar.header("#dataviz2023efrei")
 
 @st.cache_data
 def load_data():
-    url = "https://assurance-maladie.ameli.fr/content/descriptif-des-variables-de-la-serie-open-medic"
+    url = "https://open-data-assurance-maladie.ameli.fr/medicaments/download.php?Dir_Rep=Open_MEDIC_Base_Complete&Annee=2022"
     return pd.read_csv(url, encoding='ISO-8859-1')
 
 medic = load_data()
